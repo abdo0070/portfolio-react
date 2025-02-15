@@ -1,5 +1,6 @@
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
+import Projects from "../components/Projects"
 
 export const Home = () => {
     return (
@@ -10,8 +11,8 @@ export const Home = () => {
             <div className="relative z-10 flex flex-col items-center p-4 space-y-8 container mx-auto">
                 <Navbar />
                 <Hero />
+                <Projects />
             </div>
-
         </main>
     )
 }

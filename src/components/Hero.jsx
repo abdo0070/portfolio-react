@@ -3,7 +3,7 @@ import { HERO } from '../constants';
 import myImg from '../assets/abdo.jpg';
 const Hero = () => {
     return (
-        <section className='flex min-h-screen flex-col md:flex-row items-center'>
+        <section className='flex lg:min-h-screen flex-col md:flex-row items-center'>
 
             <div className="w-full md:w-1/2">
                 <h2 className='p-1 md:p-2 text-2xl font-bold md:text-5xl lg:text-8xl'>
