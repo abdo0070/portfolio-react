@@ -41,7 +41,6 @@ const Navbar = () => {
                   <a className="hover:text-yellow-400" href={item.href}
                     onClick={(e) => {
                       handleLink(e, item.href)
-                      
                     }}>
                     {item.label}
                   </a>

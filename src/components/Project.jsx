@@ -1,3 +1,5 @@
+import { MdArrowOutward } from "react-icons/md";
+
 const Project = ({ project }) => {
     return (
         <div className="group relative overflow-hidden rounded-3xl">
@@ -8,8 +10,11 @@ const Project = ({ project }) => {
         backdrop-blur-lg transition-opacity duration-500 group-hover:opacity-100">
                 <h2 className="text-center mb-2 text-xl">{project.name}</h2>
                 <p className="text-center p-2">{project.description}</p>
-                <a href="#" className="rounded-full bg-white font-medium text-black px-4 py-2">
-                    View
+                <a href={project.githubLink} className="rounded-full hover:bg-gray-300 bg-white font-medium text-black px-4 py-2">
+                    <div className="flex items-center">
+                        <span>View</span>
+                        <MdArrowOutward />
+                    </div>
                 </a>
             </div>
         </div>
