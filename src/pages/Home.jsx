@@ -1,3 +1,4 @@
+import Education from "../components/Education"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
 import Projects from "../components/Projects"
@@ -16,6 +17,7 @@ export const Home = () => {
                 <Projects />
                 <Skills />
                 <WorkExp />
+                <Education />
             </div>
         </main>
     )
