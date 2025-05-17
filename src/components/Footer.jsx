@@ -2,13 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="md:h-44 min-h-fit bg-slate-900 w-full flex justify-center">
+    <div className="w-full md:h-44 min-h-fit flex justify-center ">
       <div className="w-10/12 h-full p-2 flex justify-between items-center g-3 md:g-5">
         {/**LOGO & CONTACT SECTION */}
         <div className="h-full flex flex-col gap-2">
-          <div className="h-8 w-8 md:w-20 md:h-20">
+          <div className="w-20 h-10 md:w-24 md:h-12">
             <img
-              className="bg-transparent rounded-full w-fit h-fit"
+              className="bg-transparent rounded-md w-full h-full"
               src="/logo.png"
               alt=""
             />
