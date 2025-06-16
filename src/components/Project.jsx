@@ -2,12 +2,6 @@ import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 
 const Project = ({ project }) => {
-  /*
-  5*60
-  150
-  4*60
-  
-  */
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -31,7 +25,7 @@ const Project = ({ project }) => {
         <h2 className="text-center mb-2 text-xl">{project.name}</h2>
         <p className="text-center p-2">{project.description}</p>
         <a
-          href={project.githubLink}
+          href={project.link}
           className="rounded-full hover:bg-gray-300 bg-white font-medium text-black px-4 py-2"
         >
           <div className="flex items-center">

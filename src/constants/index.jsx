@@ -1,26 +1,18 @@
-import {
-  FaXTwitter,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaDiscord,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaFacebook, FaDiscord } from "react-icons/fa6";
 
-import projectImage1 from "../assets/project1.jpeg";
-import projectImage2 from "../assets/project2.jpeg";
-import projectImage3 from "../assets/project3.jpeg";
-import projectImage4 from "../assets/project4.jpeg";
-import projectImage5 from "../assets/project5.jpeg";
-import projectImage6 from "../assets/project6.jpeg";
+import projectImage1 from "../assets/p-1.png";
+import projectImage2 from "../assets/p-2.png";
+import projectImage3 from "../assets/p-3.png";
+import projectImage4 from "../assets/p-4.png";
+import projectImage5 from "../assets/p-5.png";
+import projectImage6 from "../assets/p-6.png";
 
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-
+import { FaDatabase } from "react-icons/fa";
+import { FaLaravel } from "react-icons/fa";
 export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
@@ -44,43 +36,42 @@ export const HERO = {
 export const PROJECTS = [
   {
     id: 1,
-    name: "Personal Portfolio",
-    description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
-    image: projectImage1,
-    githubLink: "https://github.com/user/personal-portfolio",
+    name: "CV Portal",
+    description: `The CV Portal is a comprehensive platform designed to bridge the gap between job seekers and employers. Built
+    using modern web technologies, the portal offers a seamless and secure experience for both job hunters and
+    recruiters.`,
+    image: projectImage2,
+    link: "https://cvportal.netlify.app/",
   },
   {
     id: 2,
-    name: "E-Commerce Platform",
-    description:
-      "An e-commerce web application developed using Next.js and Stripe for payment integration, featuring a comprehensive product catalog, shopping cart, and checkout system.",
-    image: projectImage2,
-    githubLink: "https://github.com/user/ecommerce-platform",
+    name: "Turbo chat",
+    description: `A real-time chat application using Firebase for backend services, including user authentication, chat rooms, and instant messaging features. Built with React and Mongo.`,
+    image: projectImage1,
+    link: "https://turbochat.netlify.app/",
   },
   {
     id: 3,
-    name: "Task Management Tool",
-    description:
-      "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards, task assignment, and progress tracking.",
+    name: "Tstore iphone",
+    description: `TStore is a simple website template using HTML, CSS, and JavaScript for showcasing and selling phones. It features product listings, a clean layout, and easy customization.`,
     image: projectImage3,
-    githubLink: "https://github.com/user/task-management-tool",
+    link: "https://tstore-iphone-template.netlify.app/",
   },
   {
     id: 4,
-    name: "Weather App",
-    description:
-      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with React and styled-components.",
+    name: "Tarboush Store",
+    description: `Tarboush Store is a modern e-commerce website built with React and Tailwind CSS.
+It offers a fast, responsive, and user-friendly shopping experience across all devices.
+With dynamic components and clean design, it ensures smooth navigation and scalability.`,
     image: projectImage4,
-    githubLink: "https://github.com/user/weather-app",
+    link: "https://tarboush-store.netlify.app/",
   },
   {
     id: 5,
-    name: "Blog Platform",
-    description:
-      "A blogging platform developed with Next.js and Markdown for creating, editing, and publishing blog posts. It features a rich text editor, tag system, and user authentication.",
+    name: "Restaurant Reservation",
+    description: `The Restaurant Reservation System is a web application built using MySQL, PHP Laravel framework, and various frontend technologies The main purpose of this system is to facilitate restaurant management, streamline reservation processes, and enhance user experience.`,
     image: projectImage5,
-    githubLink: "https://github.com/user/blog-platform",
+    link: "https://github.com/abdo0070/Reservation-Restaurant",
   },
   {
     id: 6,
@@ -88,7 +79,7 @@ export const PROJECTS = [
     description:
       "A real-time chat application using Firebase for backend services, including user authentication, chat rooms, and instant messaging features. Built with React and Firebase.",
     image: projectImage6,
-    githubLink: "https://github.com/user/chat-application",
+    link: "https://github.com/user/chat-application",
   },
 ];
 
@@ -115,60 +106,40 @@ export const SKILLS = [
     experience: "1.5+ years",
   },
   {
-    icon: <DiRedis className="text-4xl text-red-600 lg:text-5xl" />,
-    name: "Redis",
-    experience: "1+ year",
-  },
-  {
     icon: <FaNodeJs className="text-4xl text-green-600 lg:text-5xl" />,
     name: "Node.js",
     experience: "2+ years",
   },
   {
-    icon: <BiLogoPostgresql className="text-4xl text-sky-700 lg:text-5xl" />,
-    name: "PostgreSQL",
+    icon: <FaDatabase className="text-4xl text-sky-700 lg:text-5xl" />,
+    name: "MySQL",
+    experience: "1+ year",
+  },
+
+  {
+    icon: <FaLaravel className="text-4xl text-sky-700 lg:text-5xl" />,
+    name: "Laravel",
     experience: "1+ year",
   },
 ];
 
 export const EXPERIENCES = [
   {
-    title: "Lead Frontend Developer",
-    company: "Innovative Tech Solutions",
-    duration: "July 2020 - Present",
-    description:
-      "As the Lead Frontend Developer, I spearheaded the development of advanced web applications using cutting-edge technologies like React, Redux, and TypeScript. I worked closely with cross-functional teams, including designers, product managers, and backend developers, to deliver seamless and high-performance user experiences.",
-  },
-  {
-    title: "Frontend Engineer",
-    company: "Digital Creations",
-    duration: "February 2016 - June 2020",
-    description:
-      "At Digital Creations, I focused on building highly interactive and responsive web interfaces using HTML, CSS, JavaScript, and modern libraries like React. I collaborated closely with UX/UI designers to implement design changes that enhanced user engagement and satisfaction. My role involved optimizing website performance, ensuring cross-browser compatibility, and implementing SEO best practices. ",
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Bright Future Technologies",
-    duration: "August 2014 - January 2016",
-    description:
-      "In my role as a Junior Web Developer, I assisted in the development and maintenance of various web applications. I gained hands-on experience in utilizing HTML, CSS, and JavaScript to create user-friendly interfaces. I actively participated in team meetings, contributed to project planning, and collaborated with senior developers to implement new features.",
+    title: "Backend Developer Trainee",
+    company: "Orange Digital Center",
+    duration: "Aug 2022 - Oct 2022",
+    description: `Learned how to desgin , code and unit testing backend applications using OOP PHP, HTML, CSS, Laravel, SQL,
+MVC, and Developed expertise in designing, coding, and performing unit testing for backend applications,
+utilizing Object-Oriented PHP, HTML, CSS, Laravel, SQL, MVC architecture, and APIs`,
   },
 ];
 
 export const EDUCATION = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    duration: "September 2012 - June 2014",
-    description:
-      "Specialized in Human-Computer Interaction and Software Engineering. Completed a thesis on enhancing user experience in web applications through advanced interactive techniques. Participated in various projects involving frontend development, algorithms, and data structures. Graduated with honors.",
-  },
-  {
     degree: "Bachelor of Science in Information Technology",
-    institution: "University of California, Berkeley",
-    duration: "September 2008 - June 2012",
+    institution: "University of Ain Shams,Cairo",
     description:
-      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
+      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP.",
   },
 ];
 
@@ -182,14 +153,6 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
-    icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://x.com/",
-    icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
-  },
-  {
     href: "https://github.com/",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
@@ -198,3 +161,6 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
 ];
+export const COLORS = {
+  DARK_BLUE : "0A0C32"
+}
