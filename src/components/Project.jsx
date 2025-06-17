@@ -23,7 +23,7 @@ const Project = ({ project }) => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-center mb-2 text-xl">{project.name}</h2>
-        <p className="text-center p-2">{project.description}</p>
+        <p className="text-center p-2 text-sm md:text-base">{project.description}</p>
         <a
           href={project.link}
           className="rounded-full hover:bg-gray-300 bg-white font-medium text-black px-4 py-2"

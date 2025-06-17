@@ -3,7 +3,7 @@ import { SOCIAL_MEDIA_LINKS } from "../constants";
 
 const Footer = () => {
   return (
-    <div className="w-full md:h-44 min-h-fit flex justify-center text-slate-200">
+    <div className="w-full md:h-44 min-h-fit flex justify-center text-slate-200 bg-slate-950">
       <div className="w-10/12 h-full p-2 flex justify-between items-center g-3 md:g-5">
         {/**LOGO & CONTACT SECTION */}
         <div className="h-full flex flex-col gap-2">

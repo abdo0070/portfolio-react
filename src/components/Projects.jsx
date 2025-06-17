@@ -3,7 +3,7 @@ import { PROJECTS } from "../constants";
 import Project from "./Project";
 const Projects = () => {
   return (
-    <div className="w-full text-white" id="projects">
+    <div className="w-full container text-white" id="projects">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         className="mb-8 text-center font-semibold text-3xl lg:text-4xl"

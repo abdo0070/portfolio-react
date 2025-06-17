@@ -1,3 +1,4 @@
+import { Banner } from "../components/Banner";
 import Contact from "../components/Contact";
 import Education from "../components/Education";
 import Footer from "../components/Footer";
@@ -9,14 +10,11 @@ import WorkExp from "../components/WorkExp";
 
 export const Home = () => {
   return (
-    <main className="relative h-full overflow-y-auto antialiased">
-      <div
-        className="fixed inset-0 bg-fixed bg-cover bg-center
-             bg-gradient-to-r from-slate-950 to-slate-800"
-      ></div>
-      <div className="relative z-10 flex flex-col items-center p-4 space-y-8 container mx-auto">
+    <main className="relative h-full w-full overflow-y-auto antialiased  bg-gradient-to-r from-slate-950 to-slate-800">
+      <div className=" w-full z-10 flex flex-col items-center pt-0-4 space-y-8">
         <Navbar />
         <Hero />
+        <Banner />
         <Projects />
         <Skills />
         <WorkExp />
