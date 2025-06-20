@@ -19,6 +19,7 @@ export const Home = () => {
         <Skills />
         <WorkExp />
         <Education />
+        <Contact/>
         <Footer />
       </div>
     </main>

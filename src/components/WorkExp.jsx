@@ -3,7 +3,7 @@ import { EXPERIENCES } from "../constants";
 
 const WorkExp = () => {
   return (
-    <div className="pt-20 container text-white" id="work">
+    <div className="pt-20 container w-10/12 text-white" id="work">
       <h2 className="text-center text-4xl font-semibold tracking-tighter">
         Work Experince
       </h2>

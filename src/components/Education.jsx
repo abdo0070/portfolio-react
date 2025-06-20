@@ -3,7 +3,7 @@ import { EDUCATION } from "../constants";
 
 const Education = () => {
   return (
-    <div className="py-8 container text-white w-full" id="education">
+    <div className="py-8 container w-10/12 text-white" id="education">
       <h2 className="mb-4 text-center font-semibold text-3xl lg:text-4xl">
         Education
       </h2>

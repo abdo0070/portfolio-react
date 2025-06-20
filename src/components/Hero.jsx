@@ -4,7 +4,7 @@ import myImg from "../assets/abdo.jpg";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <section className="flex w-full container lg:min-h-screen flex-col md:flex-row items-center md:justify-between text-slate-300">
+    <section className="flex w-10/12 container lg:min-h-screen flex-col md:flex-row items-center md:justify-between text-slate-300">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

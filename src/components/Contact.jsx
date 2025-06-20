@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 const Contact = () => {
-  /*
-  1- make the html code (DONE)
-  2- make the validation (DONE)
-  3- finish the tailwind.css
-  */
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,11 +49,21 @@ const Contact = () => {
         publicKey: "MVY6e9PxVx35kilFq",
       })
       .then((res) => {
-        alert("success");
+        Swal.fire({
+          icon: "success",
+          title: `${formData.name} ,Message Sent!`,
+          text: "Thanks for reaching out — I’ll get back to you soon.",
+          showConfirmButton: false,
+          timer: 2000,
+        });
       })
       .catch((e) => {
-        console.log(e);
-        console.log("FAILED");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          timer: 2000,
+        });
       })
       .finally(() => setIsSending(false));
   };
@@ -68,47 +74,72 @@ const Contact = () => {
       ...formData,
       [name]: value,
     });
+    setErrors({});
   };
 
   return (
-    <>
+    <div className="w-10/12 text-white">
+      <h2 className="font-bold text-center">FEEL FREE TO EMAIL ME </h2>
       <form action="" onSubmit={handleSubmit}>
-        <div className="w-full flex flex-row p-1">
-          <label htmlFor="name" className="w-3/12">
-            name
-          </label>
-          <input
-            type="text"
-            className="w-9/12"
-            placeholder="name"
-            value={formData.name}
-            id="name"
-            name="name"
-            onChange={handleChange}
-          />
-          {errors.name && <p className="text-rose-800">{errors.name}</p>}
+        {/**EMAIL&NAME SECTION */}
+        <div className="flex sm:flex-row flex-col w-full justify-between sm:gap-2">
+          {/*NAME*/}
+          <div className="w-full">
+            <div className="w-full flex flex-row  border-slate-400 border p-1 rounded-sm my-2">
+              <label
+                htmlFor="name"
+                className=" text-slate-200 font-serif w-2/12"
+              >
+                Name:
+              </label>
+              <input
+                type="text"
+                className="w-10/12 rounded-sm bg-slate-800 px-1"
+                placeholder="ex:jo"
+                value={formData.name}
+                id="name"
+                name="name"
+                onChange={handleChange}
+              />
+            </div>
+            {errors.name && <p className="text-rose-800">{errors.name}</p>}
+          </div>
+
+          {/*EMAIL*/}
+          <div className="w-full">
+            <div className="w-full flex flex-row  border-slate-400 border p-1 rounded-sm my-2">
+              <label
+                htmlFor="email"
+                className="text-slate-200 font-serif w-2/12"
+              >
+                Email:
+              </label>
+              <input
+                type="email"
+                className="w-10/12 rounded-sm bg-slate-800 px-1 "
+                placeholder="ex:jo@gmail.com"
+                value={formData.email}
+                id="email"
+                name="email"
+                onChange={handleChange}
+              />
+            </div>
+            {errors.email && <p className="text-rose-800">{errors.email}</p>}
+          </div>
         </div>
 
-        <div className="w-full flex flex-row p-1">
-          <label htmlFor="email" className="w-3/12">
-            Email
+        {/**MESSAGE SECTION */}
+        <div className="flex flex-col border-slate-400 border p-1 rounded-sm my-2">
+          <label
+            htmlFor="message"
+            className="text-slate-200 font-serif w-3/12 py-1 "
+          >
+            Message:
           </label>
-          <input
-            type="email"
-            className="w-9/12"
-            placeholder="email"
-            value={formData.email}
-            id="email"
-            name="email"
-            onChange={handleChange}
-          />
-          {errors.email && <p className="text-rose-800">{errors.email}</p>}
-        </div>
-
-        <div className="">
-          <label htmlFor="message">Message</label>
           <textarea
+            className="w-full bg-slate-800"
             rows={6}
+            placeholder="type..."
             id="message"
             name="message"
             value={formData.message}
@@ -117,15 +148,17 @@ const Contact = () => {
           {errors.message && <p className="text-rose-800">{errors.message}</p>}
         </div>
 
-        <button
-          onClick={handleSubmit}
-          type="submit"
-          className="text-white bg-green-400 p-1 rounded-md"
-        >
-          Send
-        </button>
+        <div className="flex justify-center">
+          <button
+            onClick={handleSubmit}
+            type="submit"
+            className="w-full sm:w-1/4 bg-sky-700 hover:bg-sky-600 text-slate-100 font-semibold py-2 rounded-sm mt-4 transition-colors duration-200"
+          >
+            <i className="fas fa-paper-plane"></i>
+          </button>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 

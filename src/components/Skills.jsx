@@ -2,7 +2,7 @@ import { SKILLS } from "../constants";
 import { motion } from "framer-motion";
 const Skills = () => {
   return (
-    <div className="container mx-auto text-white" id="skills">
+    <div className="container w-10/12 text-white" id="skills">
       <h2 className="lg:mb-12 lg:mt-20 my-6 text-center text-4xl font-semibold">
         Skills
       </h2>
