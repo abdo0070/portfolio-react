@@ -149,11 +149,7 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
-    icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://github.com/",
+    href: "https://github.com/abdo0070",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {

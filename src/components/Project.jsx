@@ -19,7 +19,8 @@ const Project = ({ project }) => {
       <motion.div
         className="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-lg "
         initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
+        whileTap={{opacity:1}}
+        whileHover={{opacity:1}}
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-center mb-2 text-xl">{project.name}</h2>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -78,7 +79,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-10/12 text-white">
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.4 , delay:0.4 }}
+      className="w-10/12 text-white"
+      id="contact"
+    >
       <h2 className="font-bold text-center">FEEL FREE TO EMAIL ME </h2>
       <form action="" onSubmit={handleSubmit}>
         {/**EMAIL&NAME SECTION */}
@@ -152,13 +159,13 @@ const Contact = () => {
           <button
             onClick={handleSubmit}
             type="submit"
-            className="w-full sm:w-1/4 bg-sky-700 hover:bg-sky-600 text-slate-100 font-semibold py-2 rounded-sm mt-4 transition-colors duration-200"
+            className="w-full md:1/4 bg-sky-700 hover:bg-sky-600 text-slate-100 font-semibold py-2 rounded-sm mt-4 transition-colors duration-200"
           >
             <i className="fas fa-paper-plane"></i>
           </button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
